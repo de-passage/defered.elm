@@ -1,0 +1,16 @@
+{
+    "name": "elm-lazy",
+    "exposed-modules": ["Lazy"],
+    "license": "MIT",
+    "summary": "Generalized lazy function evaluation for Elm",
+    "version": "1.0.0",
+    "type": "package",
+    "source-directories": [
+        "src"
+    ],
+    "elm-version": "0.19.0",
+    "dependencies": {
+    },
+    "test-dependencies": {
+    }
+}
