@@ -25,14 +25,14 @@ sequence =
 
 filterList : (a -> Defered Bool) -> List a -> Defered (List a)
 filterList f =
-    defer2 List.filter (f >> eval)
+    defer2 List.filter (\a -> eval (f a))
 
 
 maybeWithDefault : Maybe a -> Defered a -> a
-maybeWithDefault m a =
+maybeWithDefault m (Defered a) =
     case m of
         Nothing ->
-            eval a
+            a ()
 
         Just v ->
             v
