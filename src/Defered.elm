@@ -1,4 +1,4 @@
-module Defered exposing (Defered(..), apply, andThen, defer, defer2, defer3, defer4, defer5, defer6, defer7, defer8, defer9, eval, map, wrap)
+module Defered exposing (Defered(..), andThen, apply, defer, defer2, defer3, defer4, defer5, defer6, defer7, defer8, defer9, eval, map, wrap)
 
 
 type Defered a
@@ -9,9 +9,11 @@ defer : (a -> b) -> a -> Defered b
 defer f a =
     Defered (\_ -> f a)
 
+
 eval : Defered a -> a
 eval (Defered l) =
     l ()
+
 
 defer2 : (a -> b -> c) -> a -> b -> Defered c
 defer2 f a b =
@@ -67,5 +69,7 @@ wrap : a -> Defered a
 wrap a =
     Defered (\_ -> a)
 
+
 apply : a -> Defered (a -> b) -> Defered b
-apply a (Defered f) = Defered (\_ -> f () a)
+apply a (Defered f) =
+    Defered (\_ -> f () a)

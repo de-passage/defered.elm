@@ -1,4 +1,29 @@
-module Defered.Extra exposing (andApply, before, deferedLift, deferedLift2, deferedLift3, deferedLift4, deferedLift5, deferedLift6, deferedLift7, deferedLift8, deferedLift9, filterList, lift, lift2, lift3, lift4, lift5, lift6, lift7, lift8, lift9, mapList, maybeWithDefault, sequence)
+module Defered.Extra exposing
+    ( andApply
+    , before
+    , deferedLift
+    , deferedLift2
+    , deferedLift3
+    , deferedLift4
+    , deferedLift5
+    , deferedLift6
+    , deferedLift7
+    , deferedLift8
+    , deferedLift9
+    , filterList
+    , lift
+    , lift2
+    , lift3
+    , lift4
+    , lift5
+    , lift6
+    , lift7
+    , lift8
+    , lift9
+    , mapList
+    , maybeWithDefault
+    , sequence
+    )
 
 import Defered exposing (Defered(..), defer, defer2, eval, wrap)
 
