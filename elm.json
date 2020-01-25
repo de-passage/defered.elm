@@ -1,9 +1,9 @@
 {
-    "name": "de-passage/elm-lazy",
+    "name": "de-passage/defered",
     "author": "Sylvain Leclercq",
     "exposed-modules": ["Defered", "Defered.Extra"],
     "license": "MIT",
-    "summary": "Generalized lazy function evaluation for Elm",
+    "summary": "Generalized defered function evaluation for Elm",
     "version": "1.0.0",
     "type": "package",
     "source-directories": [
